@@ -1,7 +1,7 @@
 #ifndef RULE_HPP
 #define RULE_HPP
 #include "Calculator.hpp"
-#include "functions.hpp"
+
 
 //风云宴 蓝采和
 int banquetRule0(BanquetStrictRule **, BanquetLenientRule **, States &, int);
@@ -36,6 +36,12 @@ void banquetRule(BanquetRule *const &rule, States &s, int *bestfull) {
         strictRule[i] = &rule[i].strictRule;
         lenientRule[i] = &rule[i].lenientRule;
     }
+    
+    //风云宴 玉贵人 苏妲己
+    int d = 0;
+    bestfull[0] = 19;//饱腹感
+    //第一个贵客
+
 
     
     bestfull[0] = banquetRule0(strictRule, lenientRule, s, 0);
